@@ -7,19 +7,18 @@ import Public from './public/Public';
 function App() {
   return (
       <Routes>
-        
         <Route
           path="/"
           element={<Home />} 
         >
-          <Route
+          {/* <Route
             path="admin"
             element={<Admin />} 
           ></Route>
           <Route
             path="public"
             element={<Public />} 
-          ></Route>
+          ></Route> */}
         </Route>
       </Routes>
   );
