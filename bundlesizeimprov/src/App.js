@@ -11,15 +11,15 @@ function App() {
           path="/"
           element={<Home />} 
         >
-          {/* <Route
-            path="public"
-            element={<Public />} 
-          ></Route> */}
         </Route>
         <Route
             path="admin"
             element={<Admin />} 
-          ></Route>
+        ></Route>
+        <Route
+            path="public"
+            element={<Public />} 
+        ></Route>
       </Routes>
   );
 }
