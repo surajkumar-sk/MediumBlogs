@@ -3,22 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.0.2",
+    "@mui/styles": "^6.4.11",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "customize-cra": "^1.0.0",
+    "libphonenumber-js": "^1.12.7",
     "react": "^19.1.0",
+    "react-app-rewired": "^2.2.1",
     "react-dom": "^19.1.0",
     "react-router": "^6.30.0",
     "react-router-dom": "^6.30.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "source-map-explorer": "^2.5.3",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.99.6",
+    "webpack-bundle-analyzer": "^4.10.2"
   },
   "scripts": {
-    "start": "react-scripts start --openssl-legacy-provider",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start --openssl-legacy-provider",
+    "build": "react-app-rewired build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "stat": "webpack --profile --json > stats.json"
   },
   "eslintConfig": {
     "extends": [
@@ -37,5 +48,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "sideEffects": [
+    "**/*.css",
+    "./src/polyfills.js"
+  ],
+  "devDependencies": {
+    "webpack-cli": "^6.0.1"
   }
 }
