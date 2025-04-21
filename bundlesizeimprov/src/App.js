@@ -12,14 +12,14 @@ function App() {
           element={<Home />} 
         >
           {/* <Route
-            path="admin"
-            element={<Admin />} 
-          ></Route>
-          <Route
             path="public"
             element={<Public />} 
           ></Route> */}
         </Route>
+        <Route
+            path="admin"
+            element={<Admin />} 
+          ></Route>
       </Routes>
   );
 }
