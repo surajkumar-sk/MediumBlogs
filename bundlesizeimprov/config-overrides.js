@@ -5,9 +5,9 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = function override(config, env) {
     const bundleAnalyser = new BundleAnalyzerPlugin({
-        analyzerMode: "static", // Opens in a browser
-        openAnalyzer: true,    // Auto-opens the report
-        defaultSizes: 'parsed'
+        analyzerMode: "disabled", // Opens in a browser
+        openAnalyzer: false,    // Auto-opens the report
+        generateStatsFile: true
     })
     config.optimization.usedExports = true;
     // never use this in production becuse concatenateModules is an update 
@@ -42,6 +42,15 @@ module.exports = function override(config, env) {
           chunks: ["public"], // Load only public.js and related chunks
         })
       );
+
+    config.stats = {
+        all: false, // Avoids too much noise
+        errors: true,
+        warnings: true,
+        moduleTrace: true, // Shows how modules are included
+        reasons: true, // Displays why a module is bundled
+        usedExports: true, // Shows tree-shaking info
+    };
 
     config.plugins.push(bundleAnalyser);
     return config;
