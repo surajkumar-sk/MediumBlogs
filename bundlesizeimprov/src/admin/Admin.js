@@ -2,6 +2,7 @@ import React from "react";
 import { isValidPhoneNumber, lazyLoadImports } from "../common/Utilities";
 import { Box } from "@mui/material";
 import {withStyles} from "@mui/styles"
+import { ROUTES_DEFINED } from "../App";
 
 const styles = {
     wrapper: {
@@ -40,7 +41,7 @@ class Admin extends React.Component{
         }
     }
     componentDidMount(){
-        lazyLoadImports("admin");
+        lazyLoadImports(ROUTES_DEFINED.admin);
     }
     onSubmit(e){
         const { phoneNumber } = this.state;

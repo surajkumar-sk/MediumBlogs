@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = function override(config, env) {
@@ -15,7 +16,7 @@ module.exports = function override(config, env) {
     config.optimization.concatenateModules = false;
 
     config.entry = {
-        main: path.resolve(__dirname, "src/index.js"), // Main app entry
+        main: path.resolve(__dirname, "src/publicRoute/publicIndex.js"), // Main app entry
         public: path.resolve(__dirname, "src/publicRoute/publicIndex.js"), // Public-only entry
       };
       // Update output to handle multiple entry points

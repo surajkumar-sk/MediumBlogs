@@ -1,11 +1,14 @@
 import React from "react";
-import { getSmallString  } from "../common/Utilities";
+import { getSmallString, lazyLoadImports  } from "../common/Utilities";
 
 
 export default class Public extends React.Component{
     constructor(){
         super();
        
+    }
+    componentDidMount(){
+        lazyLoadImports();
     }
     render(){
         return(
