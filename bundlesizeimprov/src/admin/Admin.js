@@ -2,7 +2,7 @@ import React from "react";
 import { isValidPhoneNumber, lazyLoadImports } from "../common/Utilities";
 import { Box } from "@mui/material";
 import {withStyles} from "@mui/styles"
-import { ROUTES_DEFINED } from "../App";
+import { ROUTES_DEFINED } from "../common/Constants";
 
 const styles = {
     wrapper: {

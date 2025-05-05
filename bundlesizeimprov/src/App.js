@@ -5,11 +5,6 @@ import Home from "./internal/Home"
 import Admin from './admin/Admin';
 import { getBigString } from './common/Utilities';
 
-export const ROUTES_DEFINED = {
-  "home":0,
-  "admin": 1,
-  "public": 2
-};
 
 class App1 {
   render(){

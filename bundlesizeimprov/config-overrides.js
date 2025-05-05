@@ -5,8 +5,8 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = function override(config, env) {
     const bundleAnalyser = new BundleAnalyzerPlugin({
-        analyzerMode: "disabled", // Opens in a browser
-        openAnalyzer: false,    // Auto-opens the report
+        analyzerMode: "server", // Opens in a browser
+        openAnalyzer: true,    // Auto-opens the report
         generateStatsFile: true
     })
     config.optimization.usedExports = true;
